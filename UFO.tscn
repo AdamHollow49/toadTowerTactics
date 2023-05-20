@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://jo605lg46ujd"]
+
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_6x43g"]
+[ext_resource type="Texture2D" uid="uid://bogfas8mwst8n" path="res://Assets/Art/Isometric/enemy_ufoRed_S.png" id="1_wsfr3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dbw8e"]
+radius = 42.1584
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_6x43g")
+
+[node name="EnemyUfoRedS" type="Sprite2D" parent="CharacterBody2D"]
+y_sort_enabled = true
+position = Vector2(0, -53)
+scale = Vector2(1, 0.970588)
+texture = ExtResource("1_wsfr3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-1, -7)
+shape = SubResource("CircleShape2D_dbw8e")

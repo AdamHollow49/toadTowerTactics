@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cl2vjsf57upjo"]
+
+[ext_resource type="Texture2D" uid="uid://iekwt4ilo381" path="res://Assets/Art/kenney_isometricBlocks/PNG/Voxel tiles/voxelTile_03.png" id="1_jcg72"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+y_sort_enabled = true
+position = Vector2(0, -32)
+texture = ExtResource("1_jcg72")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+scale = Vector2(-20.8312, 15.2573)
+polygon = PackedVector2Array(2.67, 0, 0, 2.1, -2.67, 0, 0, -2.1)

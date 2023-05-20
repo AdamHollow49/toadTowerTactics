@@ -27,4 +27,10 @@ func _process(delta):
 		fade()
 	fadeCount += 1
 
+	if Input.is_action_just_pressed("enter"):
+		get_tree().change_scene_to_file("res://levelOne.tscn")
 	
+
+
+func _on_audio_stream_player_finished():
+	$AudioStreamPlayer.play()
