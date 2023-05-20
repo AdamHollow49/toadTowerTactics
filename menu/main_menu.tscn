@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://bl0dlblrhtrdk"]
+
+[ext_resource type="Script" path="res://menu/main_menu.gd" id="1_vtc8h"]
+[ext_resource type="Texture2D" uid="uid://c26a0o7eyrgq4" path="res://Assets/Backgounds/backgroundMainMenu.webp" id="2_p864i"]
+[ext_resource type="FontFile" uid="uid://d0xqypq7jfeiy" path="res://Assets/Fonts/SRAFreePixelFontPack/PixelMiddle.ttf" id="3_yj0uf"]
+
+[node name="mainMenu" type="Node2D"]
+script = ExtResource("1_vtc8h")
+
+[node name="background" type="Sprite2D" parent="."]
+scale = Vector2(2.17358, 1.8)
+texture = ExtResource("2_p864i")
+centered = false
+
+[node name="toad" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 840.0
+offset_top = 168.0
+offset_right = 1448.0
+offset_bottom = 520.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0.270588, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("3_yj0uf")
+theme_override_font_sizes/font_size = 400
+text = "Toad"
+
+[node name="tower" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 760.0
+offset_top = 416.0
+offset_right = 1510.0
+offset_bottom = 768.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0.470588, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("3_yj0uf")
+theme_override_font_sizes/font_size = 400
+text = "Tower"
+
+[node name="tactics" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 648.0
+offset_top = 656.0
+offset_right = 1623.0
+offset_bottom = 1008.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0.470588, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("3_yj0uf")
+theme_override_font_sizes/font_size = 400
+text = "Tactics"
+
+[node name="start" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 776.0
+offset_top = 952.0
+offset_right = 1751.0
+offset_bottom = 1304.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("3_yj0uf")
+theme_override_font_sizes/font_size = 100
+text = "Press ENTER to start"
