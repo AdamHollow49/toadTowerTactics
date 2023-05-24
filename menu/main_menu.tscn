@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://bgrmyx63cha6s" path="res://Assets/Music/titleMusic.mp3" id="4_gwqbp"]
 
 [node name="mainMenu" type="Node2D"]
-scale = Vector2(0.585935, 0.63655)
+scale = Vector2(1.17168, 1.29238)
 script = ExtResource("1_vtc8h")
 
 [node name="background" type="Sprite2D" parent="."]

@@ -4,19 +4,17 @@
 [ext_resource type="Texture2D" uid="uid://bogfas8mwst8n" path="res://Assets/Art/Isometric/enemy_ufoRed_S.png" id="1_wsfr3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dbw8e"]
-radius = 42.1584
+radius = 48.0
 
-[node name="Node2D" type="Node2D"]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="UFO" type="CharacterBody2D"]
 script = ExtResource("1_6x43g")
 
-[node name="EnemyUfoRedS" type="Sprite2D" parent="CharacterBody2D"]
+[node name="EnemyUfoRedS" type="Sprite2D" parent="."]
 y_sort_enabled = true
 position = Vector2(0, -53)
 scale = Vector2(1, 0.970588)
 texture = ExtResource("1_wsfr3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(-1, -7)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
 shape = SubResource("CircleShape2D_dbw8e")

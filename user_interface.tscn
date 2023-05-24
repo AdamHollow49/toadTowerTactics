@@ -1,0 +1,48 @@
+[gd_scene load_steps=10 format=3 uid="uid://bd7id8e2rtpqi"]
+
+[ext_resource type="Texture2D" uid="uid://dxntke6afy5hr" path="res://Assets/Backgounds/PNG/blue_button00.png" id="2_puyfg"]
+[ext_resource type="Texture2D" uid="uid://b8jhmk7nwnm18" path="res://Assets/Backgounds/PNG/blue_button01.png" id="3_jre2b"]
+[ext_resource type="Texture2D" uid="uid://bni6d0n82ipmk" path="res://Assets/Backgounds/PNG/blue_button02.png" id="4_3512j"]
+[ext_resource type="Texture2D" uid="uid://bjrbjunw0hhu1" path="res://Assets/Art/Isometric/towerSquare_roofC_E.png" id="5_ld2ck"]
+
+[sub_resource type="Gradient" id="Gradient_45ber"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.517647, 0.517647, 0.517647, 0.392157)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2hfih"]
+gradient = SubResource("Gradient_45ber")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j5xqi"]
+texture = ExtResource("2_puyfg")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e3l44"]
+texture = ExtResource("3_jre2b")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h1mbw"]
+texture = ExtResource("4_3512j")
+
+[node name="userInterface" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="GreenButton02" type="Sprite2D" parent="."]
+position = Vector2(-146, 24)
+scale = Vector2(10, 2.5)
+texture = SubResource("GradientTexture2D_2hfih")
+
+[node name="TextureButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = -453.0
+offset_top = -42.0
+offset_right = -307.0
+offset_bottom = 104.0
+scale = Vector2(0.9, 0.9)
+theme_override_styles/normal = SubResource("StyleBoxTexture_j5xqi")
+theme_override_styles/hover = SubResource("StyleBoxTexture_e3l44")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_h1mbw")
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureButton"]
+position = Vector2(73, 41)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("5_ld2ck")

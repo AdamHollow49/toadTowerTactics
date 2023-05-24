@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://iupjdvyrkwtd"]
+
+[ext_resource type="Script" path="res://rangeBox.gd" id="1_76oh3"]
+[ext_resource type="Script" path="res://Tower.gd" id="1_awnqt"]
+[ext_resource type="Texture2D" uid="uid://bwxw5q0awpnbo" path="res://Assets/Art/Isometric/towerSquare_bottomA_E.png" id="2_hohb2"]
+[ext_resource type="Texture2D" uid="uid://dvw5xdrmgrpc5" path="res://Assets/Art/Isometric/towerSquare_sampleC_E.png" id="3_nqbdp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cy652"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_nqbdp")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Tower2" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Tower" type="Node2D" parent="."]
+script = ExtResource("1_awnqt")
+
+[node name="StaticBody2D" type="Area2D" parent="Tower"]
+
+[node name="rangeBox" type="CollisionPolygon2D" parent="Tower/StaticBody2D"]
+position = Vector2(-87.1742, -98)
+polygon = PackedVector2Array(-432, 96, 88, -200, 601.202, 96, 58.9418, 381)
+script = ExtResource("1_76oh3")
+
+[node name="hitBox" type="CollisionPolygon2D" parent="Tower/StaticBody2D"]
+polygon = PackedVector2Array(-64, 0, 0, -24, 64, 0, 0, 32)
+
+[node name="Sprite2D" type="Sprite2D" parent="Tower/StaticBody2D"]
+position = Vector2(0, -60)
+texture = ExtResource("2_hohb2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Tower/StaticBody2D"]
+position = Vector2(0, -93)
+sprite_frames = SubResource("SpriteFrames_cy652")
+frame_progress = 1.0
+
+[node name="bulletSpawn" type="Node2D" parent="Tower/StaticBody2D"]
+position = Vector2(0, -168)
+
+[node name="Timer" type="Timer" parent="Tower"]
+
+[connection signal="body_entered" from="Tower/StaticBody2D" to="Tower/StaticBody2D/rangeBox" method="_on_static_body_2d_body_entered" flags=18]
+[connection signal="child_entered_tree" from="Tower/StaticBody2D/rangeBox" to="Tower/StaticBody2D/rangeBox" method="_on_child_entered_tree" flags=18]
+[connection signal="timeout" from="Tower/Timer" to="Tower" method="_on_timer_timeout"]
