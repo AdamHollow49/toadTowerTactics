@@ -220,6 +220,7 @@ layer_9/z_index = 5
 layer_9/tile_data = PackedInt32Array(262140, 8, 0, -1048566, 12, 0, -1048567, 12, 0, -1114102, 12, 0, -1114103, 12, 0, -786432, 12, 0, -720897, 12, 0, -851968, 12, 0, -786433, 12, 0, 196621, 12, 0, 262157, 12, 0, 262156, 12, 0, 196620, 12, 0)
 
 [node name="Path2D" type="Path2D" parent="."]
+position = Vector2(-8.01605, 10)
 curve = SubResource("Curve2D_mgjca")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]

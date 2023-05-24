@@ -14,11 +14,9 @@ size = Vector2(64, 7)
 
 [node name="Bullet" type="Node2D"]
 top_level = true
-rotation = -1.54116
 script = ExtResource("2_u5f6i")
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(-31.9965, 0.470484)
 
 [node name="TextureRect" type="TextureRect" parent="Area2D"]
 offset_left = -32.0
